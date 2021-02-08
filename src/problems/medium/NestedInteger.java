@@ -2,6 +2,9 @@ package problems.medium;
 
 import java.util.List;
 
+/***
+ * Helper for NestedListWeightSum.java problem
+ */
 // This is the interface that allows for creating nested lists.
   // You should not implement it, or speculate about its implementation
   public class NestedInteger {
