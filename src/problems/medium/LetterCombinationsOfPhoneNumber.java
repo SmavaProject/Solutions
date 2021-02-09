@@ -45,12 +45,11 @@ public class LetterCombinationsOfPhoneNumber
         }
 
         Character currentDigit = digits.charAt(digitIndex);
-        //for every Character -  this.phoneMap.get(currentDigit).length()
+        String letters = this.phoneMap.get(currentDigit);
+        //for every letter in letters -  this.phoneMap.get(currentDigit).length()
         //go to the next digit and append its values
-        for (int i = 0; i< this.phoneMap.get(currentDigit).length(); i++){
-            Character c = this.phoneMap.get(currentDigit).charAt(i);
-            String currentLetter = String.valueOf(c);
-
+        for (int i = 0; i< letters.length(); i++){
+            String currentLetter = String.valueOf(letters.charAt(i));
             recursion(digits, currentString + currentLetter, digitIndex + 1, output);
         }
     }
