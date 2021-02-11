@@ -13,11 +13,8 @@ public class KClosestPointsToOrigin
     public int[][] kClosest(int[][] points, int K) {
 
         //Pair<>: distance-indexOfPoint
-        PriorityQueue<Pair<Integer, Integer>> pk = new PriorityQueue<>(new Comparator<Pair<Integer, Integer>>(){
-            @Override
-            public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2){
-                return p1.getKey() - p2.getKey(); // min heap
-            }
+        PriorityQueue<Pair<Integer, Integer>> pk = new PriorityQueue<>((p1, p2) -> {
+            return p1.getKey() - p2.getKey(); // min heap
         });
 
         //add all points to min heap, track their index in points[][]
