@@ -12,11 +12,11 @@ public class FindTheTownJudge
         int[] isTrusted = new int[N];
 
         for(int i = 0; i< trust.length; i++){
-            int[] curr = trust[i]; //1,3
+            int[] curr = trust[i]; //[1,3]
             int trustsN = curr[0]; //1
             int isTrustedN = curr[1];//3
             trusts[trustsN-1] = true;//0-true
-            isTrusted[isTrustedN-1]++;//2-1
+            isTrusted[isTrustedN-1]++;//
         }
 
         for(int i = 0; i< N; i++){
