@@ -11,6 +11,9 @@ import java.util.List;
  */
 public class FindLeavesOfBinaryTree
 {
+    /***
+     * Мы находим листья, потом как бы "убираем" их и находим листья следующего уровня.
+     */
     /***Collect all values in HashMap. Here we store ArrayList<Integer> ready for the result
      * Integer, ArrayList<Integer> - height, list  of node values
      */

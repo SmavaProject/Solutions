@@ -32,7 +32,7 @@ public class LetterCombinationsOfPhoneNumber
     }
     /***
      * Base case:
-     * If the string that we are working on reched the length of the input => we already collected
+     * If the string that we are working on reached the length of the input => we already collected
      * the combination. Stop processing and add it to the result.
      * Other case:
      * Go through all digits. Loop through every value of the

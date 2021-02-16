@@ -8,6 +8,9 @@ import java.util.List;
  */
 public class GenerateParentheses
 {
+    /***
+     * Сгенерировать все возможные комбинации well-formed "()" скобок из данного количества n
+     */
     public List<String> generateParenthesis(int n) {
 
         List<String> result = new ArrayList<>();
