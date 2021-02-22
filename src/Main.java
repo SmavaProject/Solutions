@@ -1,3 +1,4 @@
+import problems.medium.FraudulentActivityNotifications;
 import problems.medium.MinimumTimeRequired;
 import problems.medium.SherlockAndTheValidString;
 
@@ -19,6 +20,8 @@ public class Main
         abc.add("GBD");
         Collections.sort(abc);
         //System.out.println(abc);
-        System.out.println("ATL".compareTo("SFO"));
+        //System.out.println("ATL".compareTo("SFO"));
+
+        System.out.println(FraudulentActivityNotifications.activityNotifications(new int[]{10, 20, 30, 40, 50}, 3));
     }
 }
