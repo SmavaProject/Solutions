@@ -13,7 +13,6 @@ public class FraudulentActivityNotifications
             return 0;
         }
         int numberOfNotifications = 0;
-        int[] medianArrayOrig = new int[d];
         int median = 0;
 
         //calculate the number of notifications
