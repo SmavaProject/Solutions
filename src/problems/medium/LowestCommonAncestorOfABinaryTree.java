@@ -13,6 +13,8 @@ public class LowestCommonAncestorOfABinaryTree
 {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        //рекурсия прервется либо когда мы нашли p или q, либо когда  дошли до конца и не нашли ничего
+        //других значений у TreeNode left и TreeNode right быть не может  - или null, или p либо q
         if(root == null || root == p || root==q){
             return root;
         }

@@ -22,7 +22,6 @@ public class ValidateBinarySearchTree
         if((min!=null&& node.val<= min) || (max!=null&&node.val>=max)){
             return false;
         }
-
         //обязательно validate(left) && validate(right),
         // a не по отдельности validate(left); validate(right);
         // потому что иначе рекурсия вернет результат от одного subtree
