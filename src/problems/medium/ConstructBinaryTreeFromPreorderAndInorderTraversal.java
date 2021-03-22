@@ -15,6 +15,13 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
         return helper(0, 0, inorder.length-1, preorder, inorder);
     }
 
+    /**
+     * TODO:
+     * Точнее описать параметры:
+     * @param startPreorder
+     * @param startInorder
+     * @param endInorder
+     */
     public TreeNode helper(int startPreorder, int startInorder, int endInorder, int[] preorder, int[] inorder){
         if(startPreorder>preorder.length-1||startInorder>endInorder)
             return null;
