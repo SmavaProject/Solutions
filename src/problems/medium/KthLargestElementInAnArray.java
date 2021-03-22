@@ -35,6 +35,8 @@ public class KthLargestElementInAnArray
 
         for (int i: nums){
             heap.add(i);
+            //таким образом, размер heap никогда не превышает k
+            //все елементы меньшие чем к-th largest мы убираем, потому что они нас не интересуют (они уже никогда не станут к-th largest)
             if(heap.size()>k){
                 heap.poll();
             }
