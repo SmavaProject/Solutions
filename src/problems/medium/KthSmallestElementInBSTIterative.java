@@ -20,8 +20,6 @@ public class KthSmallestElementInBSTIterative {
         LinkedList<TreeNode> stack = new LinkedList<>();
         stack.push(root);
         TreeNode current = root.left;
-
-        //Break the loop when the stack is empty AND current==null
         while(stack.size()>0 || current!=null){
             //Step1: add all current.left nodes to the stack
             if(current!=null){
