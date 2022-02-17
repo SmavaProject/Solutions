@@ -36,4 +36,11 @@ public class SortCharactersByFrequency {
         return sb.toString();
 
     }
+
+    /**
+     * Notes:
+     * 1) iterate over string: s.toCharArray()
+     * 2) access map element: Map.Entry<Character,Integer>
+     * 3) add an entire collection to the heap: maxHeap.addAll(...)
+     */
 }

@@ -51,4 +51,10 @@ public class Sum3 {
             }
         }
     }
+
+    /***
+     * Notes:
+     * 1) add new list with many elements to the List<List<Integer>>:
+     * list.add(Arrays.asList(el1, el2, el3));
+     */
 }
