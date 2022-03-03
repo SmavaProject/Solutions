@@ -46,7 +46,7 @@ public class ClosestBinarySearchTreeValueII {
                     pk.add(currDiffNode);
                 }else{
                     NodeDiff c = pk.peek();
-                    if(currDiffNode.diff < c.diff){
+                    if(currDiffNode.diff < c.diff){ //max heap
                         pk.poll();
                         pk.add(currDiffNode);
                     }
@@ -79,10 +79,7 @@ public class ClosestBinarySearchTreeValueII {
             }
             @Override
             public int compareTo(NodeDiff node){
-                double n1 = this.getDiff();
-                double n2 = node.getDiff();
-                double res =  n1-n2;
-                if(this.getDiff()> node.getDiff()){
+                if(this.getDiff()> node.getDiff()){ //max heap: we will keep only up to K smallest elements
                     return -1;
                 }else if (this.getDiff()< node.getDiff()){
                     return 1;
