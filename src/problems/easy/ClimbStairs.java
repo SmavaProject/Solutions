@@ -4,6 +4,7 @@ package problems.easy;
  * https://leetcode.com/problems/climbing-stairs/  #70 EASY
  * Dynamic programming
  * Важдно распознать зависимость на стр 25 как в Фибоначи
+ * Забраться на ступеньку n это сумма всех опций как забраться на ступеньку n-1 и n-2
  */
 public class ClimbStairs
 {
