@@ -26,12 +26,10 @@ public class CreateBinaryTreeFromDescriptions {
             children.add(descriptions[i]);
             map.put(descriptions[i][0], children);
         }
-        int rootIndex = -1;
         int rootVal = -1;
         for (int i = 0; i< descriptions.length; i++){
             int parent = descriptions[i][0];
             if(!isNotRoot.contains(parent)){
-                rootIndex = i;
                 rootVal = parent;
                 break;
             }
