@@ -12,7 +12,6 @@ public class MinimumSwapsToGroupAll1Together {
         for(int i = 0; i< data.length; i++){
             if(data[i]==1) numOfOnes++;
         }
-
         int left = 0;
         int currNumOfOnes = 0;
         for(int right = 0; right < data.length; right++){
