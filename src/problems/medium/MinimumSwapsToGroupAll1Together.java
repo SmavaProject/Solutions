@@ -6,6 +6,11 @@ public class MinimumSwapsToGroupAll1Together {
      * https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/
      * Sliding window
      */
+    /*
+     * Главная идея задачи - посчитать сколько вцелом есть 1 в data, пусть это будет numOfOnes
+     * А потом в каждом отдельно взятом окне размером numOfOnes посчитать сколько нехватает едениц
+     * Это и есть наше минимальное количество перестановок нужное для того чтобы все 1 были вместе
+     */
     public int minSwaps(int[] data) {
         int minNumOfSwaps = Integer.MAX_VALUE;
         int numOfOnes = 0;
