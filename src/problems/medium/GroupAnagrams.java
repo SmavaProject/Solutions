@@ -16,25 +16,16 @@ public class GroupAnagrams {
 
     public List<List<String>> groupAnagrams(String[] strs) {
 
-        ConcurrentHashMap<String, ArrayList<String>> map = new ConcurrentHashMap<>(); // <<<----- !!!
+        ConcurrentHashMap<String, ArrayList<String>> map = new ConcurrentHashMap<>(); // <<<-----  не нужно здесь
 
         for(int i = 0; i< strs.length; i++){
             String str = strs[i];
-
             char[] ch = str.toCharArray();
             Arrays.sort(ch);
-
-            String sortedKey = new String(ch); // <<<-------
-
-            if(map.containsKey(sortedKey)){
-                ArrayList<String> anagrams = map.get(sortedKey);
-                anagrams.add(str);
-                map.put(sortedKey, anagrams);
-            }else{
-                ArrayList<String> anagrams = new ArrayList<>();
-                anagrams.add(str);
-                map.put(sortedKey, anagrams);
-            }
+            String sortedKey = new String(ch); /// <<-- !!!
+            ArrayList<String> anagrams = map.getOrDefault(sortedKey, new ArrayList<>());
+            anagrams.add(str);
+            map.put(sortedKey, anagrams);
 
         }
 
@@ -45,7 +36,7 @@ public class GroupAnagrams {
 
     private boolean isAnagram(String str, String s){
         if(str.length()!=s.length()) return false;
-        HashMap<Character, Integer> chars = new HashMap<>();
+        HashMap<Character, Integer> chars = new HashMap<>(); // нельзя HashSet, тк важно количество
 
         for(int i = 0; i< str.length(); i++){
             Character c = str.charAt(i);
@@ -68,4 +59,5 @@ public class GroupAnagrams {
         return chars.isEmpty();
 
     }
+
 }
