@@ -6,8 +6,12 @@ public class BinaryTreeUpsideDown {
      * https://leetcode.com/problems/binary-tree-upside-down/
      */
 
-    //Just think about how you can save the tree information
-    //you need before changing the tree structure.
+    /*
+        Just think about how you can save the tree information
+        you need before changing the tree structure.
+        Каждая переменная должна быть справа и слева: мы ее используем и переназначаем
+     */
+
     class Solution {
         public TreeNode upsideDownBinaryTree(TreeNode root) {
             TreeNode curr = root;
