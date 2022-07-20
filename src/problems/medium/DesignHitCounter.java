@@ -18,7 +18,7 @@ public class DesignHitCounter {
         }
 
         public void hit(int timestamp) {
-            TreeMap<Integer, Integer> treeMap1 = treeMap;
+            //TreeMap<Integer, Integer> treeMap1 = treeMap; //for debugging
             if(!treeMap.containsKey(timestamp)){
                 treeMap.put(timestamp, 1);
             }else{
@@ -27,7 +27,7 @@ public class DesignHitCounter {
         }
 
         public int getHits(int timestamp) {
-            TreeMap<Integer, Integer> treeMap1 = treeMap;
+            //TreeMap<Integer, Integer> treeMap1 = treeMap; //for debugging
             Integer key = treeMap.floorKey(timestamp);
             int numberOfHits = 0;
             while(key != null && key > timestamp - 300){
