@@ -27,4 +27,30 @@ public class ValidateBinarySearchTree
         // потому что иначе рекурсия вернет результат от одного subtree
         return validate(node.left, min, node.val) && validate(node.right, node.val, max);
     }
+
+
+    // Вариант 2 , чуть дольше но все подробно расписано
+    public boolean isValidBST1(TreeNode root) {
+        return validate(root, null, null); //to avoid comparison with Integer.MIN_VALUE
+    }
+
+    private boolean validate1(TreeNode node, Integer maxLeft, Integer minRight){
+        if((maxLeft != null && node.val <= maxLeft) || (minRight!=null && node.val >= minRight)) return false;
+
+        boolean isLeftValid;
+        if(node.left!=null){
+            isLeftValid = validate(node.left,  maxLeft, node.val);
+        }else{
+            isLeftValid = true;
+        }
+
+        boolean isRightValid;
+        if(node.right!=null){
+            isRightValid = validate(node.right, node.val, minRight);
+        }else{
+            isRightValid = true;
+        }
+
+        return isLeftValid && isRightValid;
+    }
 }
