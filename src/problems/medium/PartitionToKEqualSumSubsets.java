@@ -1,5 +1,7 @@
 package problems.medium;
 
+import java.util.Arrays;
+
 public class PartitionToKEqualSumSubsets {
     /***
      * #698. Partition to K Equal Sum Subsets
@@ -29,7 +31,6 @@ public class PartitionToKEqualSumSubsets {
             numberOfSubsets--;
             currSum = 0;
             i = 0;
-            //return canDivide(nums, targetSum, numberOfSubsets -1, 0, 0, taken);
         }
 
         for(int j = i; j< nums.length; j++){
